@@ -1,0 +1,32 @@
+{
+ "AWSTemplateFormatVersion": "2010-09-09",
+ "Description": "This template is for creating lambda from s3 buckets",
+
+ "Parameters": {
+     "Create Lambda from S3 Buckets": {
+         "Default": "Development",
+         "Type": "String",
+         "AllowedValues": [ "Production", "Staging", "Development" ],
+         "Description": "Lambda from s3 buckets "
+     }
+ },
+ 
+ "Resources": {
+     "LambdaFunResource": {
+         "Type": "AWS::Lambda::Function",
+         "Properties": {
+             "FunctionName": "PaulLambdaCFT",
+             
+             "Code": {
+     "S3Bucket" : "paulj",
+     "S3Key" : "index.zip"
+   },
+             "Description": "S3 bucket crreation",
+             "Handler": "index.lambda_handler",
+             "Role": "arn:aws:iam::13015229333333455024:role/lambda_basic_execution",
+             "Runtime": "python3.6",
+             "Timeout": 120
+         }
+     }
+}
+}
