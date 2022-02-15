@@ -1,6 +1,6 @@
 # The following tabulation categorize the various services model into different compute services
 
-| 'Iaas'                     | 'Paas'                | 'Faas'                 |
+| Iaas                       | Paas                  | Faas                   |
 |:-------------------------- |:--------------------: |-----------------------:|
 | AWS EC2                    | Elastic Beanstalk     | Lambda Functions       |
 | Elastic container register | AppEngine             | Azure Functions        |
